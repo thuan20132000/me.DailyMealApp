@@ -1,18 +1,16 @@
 import React, { useRef, useEffect, useState, useMemo } from 'react'
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Animated, TouchableHighlight, TouchableWithoutFeedback } from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Animated, TouchableHighlight, TouchableWithoutFeedback, Dimensions } from 'react-native'
 import { COLORS } from '../../../constants/theme'
 
-const MenuTab = ({ categoriesList, onSelect, selectedCategory = null }) => {
+const MenuTab = ({ categoriesList, onSelect, selectedCategory = null,setSelectedCategory }) => {
 
-    const [selectedItem, setSelectedItem] = useState(null);
 
     const _refAnimated = useRef(new Animated.Value(0)).current;
     const scrollX = useRef(new Animated.Value(0)).current;
     const _refScroll = useRef();
 
     const _onItemPress = (item) => {
-        setSelectedItem(item);
-
+        setSelectedCategory(item)
     }
 
     useEffect(() => {
@@ -30,12 +28,9 @@ const MenuTab = ({ categoriesList, onSelect, selectedCategory = null }) => {
                     useNativeDriver: false
                 })
         ]).start();
-    }, [selectedItem])
+    }, [selectedCategory])
 
 
-    useEffect(() => {
-        setSelectedItem(categoriesList[0]);
-    }, []);
 
     // scrollX.addListener((val) => {
     //     console.warn(val)
@@ -67,7 +62,7 @@ const MenuTab = ({ categoriesList, onSelect, selectedCategory = null }) => {
                 categoriesList.length > 0 &&
                 categoriesList.map((e) => {
 
-                    if (selectedItem?.id == e.id) {
+                    if (selectedCategory?.id == e.id) {
                         let color = _refAnimated.interpolate({
                             inputRange: [0, 1],
                             outputRange: [COLORS.lightGray, COLORS.primary]
@@ -77,7 +72,6 @@ const MenuTab = ({ categoriesList, onSelect, selectedCategory = null }) => {
                             inputRange: [0, 1],
                             outputRange: ['0%', '100%']
                         })
-
                         let fontSize = _refAnimated.interpolate({
                             inputRange: [0, 1],
                             outputRange: [16, 18]
@@ -92,7 +86,9 @@ const MenuTab = ({ categoriesList, onSelect, selectedCategory = null }) => {
                                 onLayout={(event) => {
                                     event.target.measure(
                                         (x, y, width) => {
-                                           _refScroll.current.scrollTo({x:x-200})
+                                            let screenWidth = Dimensions.get('screen').width;
+                                            _refScroll.current.scrollTo({ x: x - screenWidth / 2, animated: true })
+
                                         },
                                     );
                                 }}

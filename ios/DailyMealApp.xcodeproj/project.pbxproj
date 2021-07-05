@@ -14,6 +14,7 @@
 		1F0EAF5974FD7F958C272438 /* libPods-DailyMealApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 813D5BCA295FEECCDEE5D8B3 /* libPods-DailyMealApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9B75F62F154FB315E646EA44 /* libPods-DailyMealApp-DailyMealAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE58BDC48228393802A55C3 /* libPods-DailyMealApp-DailyMealAppTests.a */; };
+		9CF0FA142692C5A800010641 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0FA132692C5A800010641 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		4EE5514FE2A7A31290CA6477 /* Pods-DailyMealApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyMealApp.release.xcconfig"; path = "Target Support Files/Pods-DailyMealApp/Pods-DailyMealApp.release.xcconfig"; sourceTree = "<group>"; };
 		813D5BCA295FEECCDEE5D8B3 /* libPods-DailyMealApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyMealApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DailyMealApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CF0FA132692C5A800010641 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* DailyMealApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CF0FA132692C5A800010641 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -114,7 +117,6 @@
 				25202E18CB47BF23CE808E0B /* Pods-DailyMealApp-DailyMealAppTests.debug.xcconfig */,
 				0D1117703A4330E694938222 /* Pods-DailyMealApp-DailyMealAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF0FA142692C5A800010641 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

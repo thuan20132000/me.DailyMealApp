@@ -1,6 +1,6 @@
 export default SCREEN = {
     Home: 'Home',
-    Restaurant: 'Restaurant',
+    RecipeDetail: 'Restaurant',
     OrderDelivery: 'OrderDelivery',
     Search:"Search",
     User:"User",

@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home } from '../screens/index.js';
+import RecipeDetail from '../screens/Recipe/RecipeDetail.js';
 
 
 
@@ -16,10 +17,11 @@ function RootNavigation() {
         <NavigationContainer>
             <RootStack.Navigator
                 screenOptions={{
-                    headerShown:false
+                    headerShown: false
                 }}
             >
                 <RootStack.Screen name="Home" component={Home} />
+                <RootStack.Screen name="RecipeDetail" component={RecipeDetail} />
             </RootStack.Navigator>
         </NavigationContainer>
     );

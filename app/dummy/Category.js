@@ -3,39 +3,53 @@ import CategoryMenu from "../model/CategoryModel";
 
 const categories = [
     new CategoryMenu({
-        id:1,
-        name:"Đồ uống",
-        slug:"do-uong1",
-        image:"image",
-        status:1
+        id: 'cat1',
+        name: "Đồ uống",
+        slug: "do-uong1",
+        image: "image",
+        status: 1
     }),
     new CategoryMenu({
-        id:2,
-        name:"Món tráng miệng",
-        slug:"meat",
-        image:"image",
-        status:1
+        id: 'cat2',
+        name: "Món tráng miệng",
+        slug: "meat",
+        image: "image",
+        status: 1
     }),
     new CategoryMenu({
-        id:3,
-        name:"Món phụ",
-        slug:"meat",
-        image:"image",
-        status:1
+        id: 'cat3',
+        name: "Món phụ",
+        slug: "meat",
+        image: "image",
+        status: 1
     }),
     new CategoryMenu({
-        id:4,
-        name:"Món ăn vặt",
-        slug:"meat",
-        image:"image",
-        status:1
+        id: 'cat4',
+        name: "Món ăn vặt",
+        slug: "meat",
+        image: "image",
+        status: 1
     }),
     new CategoryMenu({
-        id:5,
-        name:"Món chính",
-        slug:"meat",
-        image:"image",
-        status:1
+        id: 'cat5',
+        name: "Món chính",
+        slug: "meat",
+        image: "image",
+        status: 1
+    }),
+    new CategoryMenu({
+        id: 'cat6',
+        name: "Món tráng miệng",
+        slug: "meat",
+        image: "image",
+        status: 1
+    }),
+    new CategoryMenu({
+        id: 'cat7',
+        name: "Món Chay",
+        slug: "meat",
+        image: "image",
+        status: 1
     })
 ]
 
