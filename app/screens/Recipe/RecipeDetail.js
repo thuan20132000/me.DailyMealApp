@@ -2,28 +2,19 @@ import React from 'react'
 import { ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View, Animated, Image } from 'react-native'
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { COLORS } from '../../constants/theme';
+import Ingredient from './components/Ingredient';
+import Instruction from './components/Instruction';
+import Review from './components/Review';
 
 
 
-const FirstRoute = () => (
-    <View style={{ backgroundColor: '#ff4081', flex: 1 }} >
-        <Text>dfdsfd</Text>
-    </View>
-);
 
-const SecondRoute = () => (
-    <View style={{ backgroundColor: '#673ab7', flex: 1 }} />
-);
-
-const ThirdRoute = () => (
-    <View style={{ backgroundColor: '#673ab7', flex: 1 }} />
-);
 
 
 const renderScene = SceneMap({
-    first: FirstRoute,
-    second: SecondRoute,
-    third: ThirdRoute,
+    first: Ingredient,
+    second: Instruction,
+    third: Review,
 
 });
 
@@ -34,9 +25,9 @@ const RecipeDetail = (props) => {
 
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
-        { key: 'first', title: 'First' },
-        { key: 'second', title: 'Second' },
-        { key: 'third', title: 'Second' },
+        { key: 'first', title: 'Thành phần' },
+        { key: 'second', title: 'Cách nấu ăn' },
+        { key: 'third', title: 'Đánh giá' },
     ]);
 
 
@@ -77,12 +68,12 @@ const RecipeDetail = (props) => {
 
         // // alwaysBounceVertical={false}
         // >
-        <ScrollView
-            contentContainerStyle={{
-                backgroundColor: COLORS.white,
-                height: layout.height
-            }}
-        >
+        // <View
+        //     contentContainerStyle={{
+        //         backgroundColor: COLORS.white,
+        //         height: layout.height
+        //     }}
+        // >
             <View
                 style={{
                     flex: 1,
@@ -91,8 +82,11 @@ const RecipeDetail = (props) => {
             >
                 <View
                     style={{
-                        height: 200,
-                        backgroundColor: 'coral'
+                        height: 160,
+                        backgroundColor: 'coral',
+                        position: 'relative',
+                        top: 0,
+                        zIndex: 999
                     }}
                 >
                     <Image
@@ -101,7 +95,7 @@ const RecipeDetail = (props) => {
                         }}
                         style={{
                             width: '100%',
-                            height: 200
+                            height: 160
                         }}
                     />
                 </View>
@@ -113,7 +107,7 @@ const RecipeDetail = (props) => {
                     renderTabBar={_renderTabBar}
                 />
             </View>
-        </ScrollView>
+        // </View>
         // </ScrollView>
 
     )
